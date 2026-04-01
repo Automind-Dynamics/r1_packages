@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+
+<robot name="r1_mini" xmlns:xacro="https://ros.org/wiki/xacro">
+
+    <!-- xacro properties -->
+    <xacro:property name="PI" value="3.14159"/>
+
+    <!-- xacro args -->
+    <xacro:arg name="robot_namespace" default="/" />
+
+        <!-- Chassis a.k.a base_link -->
+        <link name="base_link" />
+        
+        <link name="imu"/>
+
+        <!-- Joint from base link to imu -->
+        <joint name="imu_joint" type="fixed">
+            <origin xyz="0.07215 0.0 0.07730" rpy="0 0 0" />
+            <parent link="base_link" />
+            <child link="imu" />
+        </joint>
+        
+        
+        <link name="laser"/>
+
+        <!-- Joint from base_link to laser -->
+        <joint name="laser_joint" type="fixed">
+            <origin xyz="0.07215 0.0 0.13340" rpy="0.0 0.0 3.14159" />
+            <parent link="base_link" />
+            <child link="laser" />
+        </joint>
+        
+            
+        <link name="camera_link"/>
+
+        <!-- Joint from base_link to camera_link -->
+        <joint name="camera_joint" type="fixed">
+            <origin xyz="0.15065 0.0 0.08505" rpy="0 0 0" />
+            <parent link="base_link" />
+            <child link="camera_link" />
+        </joint>
+
+</robot>

@@ -14,7 +14,7 @@ def generate_launch_description():
     autostart = LaunchConfiguration('autostart', default='True')
     
     nav2_params_file_path = os.path.join(pkg_r1nav, 'config', 'nav2_params.yaml')
-    map_path = os.path.join(pkg_r1nav, 'maps', 'camras_area.yaml')
+    map_path = os.path.join(pkg_r1nav, 'maps', 'shed1.yaml')
     rviz_config = os.path.join(pkg_r1nav, 'config', 'nav2_default.rviz')
 
     nav2_launch_cmd = IncludeLaunchDescription(

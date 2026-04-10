@@ -20,6 +20,6 @@ def generate_launch_description():
             parameters=[config_file],
             # twist_mux outputs to 'cmd_vel_out' by default. 
             # We remap it here to what your robot is already subscribed to.
-            remappings=[('/cmd_vel_out', '/r1001/cmd_vel')]
+            remappings=[('/cmd_vel_out', '/r1a001/cmd_vel')]
         )
     ])
